@@ -2,6 +2,8 @@
 
 Devolia Resort is a luxury web application designed to showcase Orai's most prestigious wedding destination. Built with Next.js and TypeScript, this project features a premium, immersive user interface with smooth GSAP animations, glassmorphism aesthetics, and a responsive design tailored for mobile and desktop users.
 
+> **✨ Live Demo:** [https://devolia-resort.vercel.app/](https://devolia-resort.vercel.app/)
+
 ## 🚀 Technology Stack
 
 - **Framework:** [Next.js 16](https://nextjs.org/) (App Router)

@@ -19,7 +19,11 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Devolia Resort | Premium Wedding Destination",
+  metadataBase: new URL("https://devolia-resort.vercel.app"),
+  title: {
+    default: "Devolia Resort | Premium Wedding Destination",
+    template: "%s | Devolia Resort",
+  },
   description:
     "Where timeless elegance meets unforgettable celebrations. Discover Devolia Resort, Orai's most prestigious wedding destination.",
   icons: {
@@ -59,7 +63,50 @@ export const metadata: Metadata = {
       "Where timeless elegance meets unforgettable celebrations.",
     type: "website",
     locale: "en_IN",
+    siteName: "Devolia Resort",
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Resort",
+  "name": "Devolia Resort",
+  "image": "https://devolia-resort.vercel.app/images/logo.jpg",
+  "@id": "https://devolia-resort.vercel.app",
+  "url": "https://devolia-resort.vercel.app",
+  "telephone": "+91 80460 59184",
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Devoliya Garden, Jalaun-Churkhi Bypass Road, Near Mayur Vihar",
+    "addressLocality": "Orai",
+    "addressRegion": "Uttar Pradesh",
+    "postalCode": "285001",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 26.0148725,
+    "longitude": 79.4415947
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "09:30",
+    "closes": "21:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/devolia_resort",
+    "https://www.instagram.com/devolia_resort"
+  ]
 };
 
 export default function RootLayout({
@@ -73,6 +120,10 @@ export default function RootLayout({
         className={`${cormorantGaramond.variable} ${sourceSans.variable}`}
         suppressHydrationWarning
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
