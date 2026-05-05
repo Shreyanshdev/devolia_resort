@@ -1,4 +1,23 @@
-# Devolia Resort | Premium Wedding Destination
+<p align="center">
+  <img src="public/images/logo.jpg" width="120" alt="Devolia Resort Logo">
+</p>
+
+<h1 align="center">Devolia Resort | Premium Wedding Destination</h1>
+
+<p align="center">
+  <b>A Luxury Experience for Timeless Celebrations in Orai, Uttar Pradesh</b>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+  <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" alt="GSAP">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
+</p>
+
+---
 
 Devolia Resort is a luxury web application designed to showcase Orai's most prestigious wedding destination. Built with Next.js and TypeScript, this project features a premium, immersive user interface with smooth GSAP animations, glassmorphism aesthetics, and a responsive design tailored for mobile and desktop users.
 
@@ -13,6 +32,41 @@ Devolia Resort is a luxury web application designed to showcase Orai's most pres
 - **Icons:** Custom Premium SVGs
 - **Email:** Nodemailer (Contact Form)
 - **Maps:** Google Maps Embed
+
+## 📸 Visual Showcase
+
+<table width="100%">
+  <tr>
+    <td width="50%">
+      <p align="center"><b>Home Page</b></p>
+      <img src="public/screenshots/home.png" width="100%" alt="Home Page">
+    </td>
+    <td width="50%">
+      <p align="center"><b>Experience</b></p>
+      <img src="public/screenshots/experience.png" width="100%" alt="Experience">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <p align="center"><b>Grounds</b></p>
+      <img src="public/screenshots/grounds.png" width="100%" alt="Grounds">
+    </td>
+    <td width="50%">
+      <p align="center"><b>Gallery</b></p>
+      <img src="public/screenshots/gallery.png" width="100%" alt="Gallery">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <p align="center"><b>Legacy</b></p>
+      <img src="public/screenshots/legacy.png" width="100%" alt="Legacy">
+    </td>
+    <td width="50%">
+      <p align="center"><b>Contact</b></p>
+      <img src="public/screenshots/contact.png" width="100%" alt="Contact">
+    </td>
+  </tr>
+</table>
 
 ## 📂 Pages & Features
 
@@ -97,6 +151,37 @@ The project uses a custom design system defined in `app/globals.css`:
 - **Colors:** Premium palette (Ivory, Charcoal, Gold options).
 - **Typography:** *Cormorant Garamond* (Headings) and *Source Sans 3* (Body).
 - **Components:** Reusable UI components like `.btn-primary` (Gold/Dark gradient) and `.btn-glass` (Frosted glass effect).
+
+## 📂 Project Architecture
+
+```text
+devolia-resort/
+├── app/                    # Next.js App Router (Routes & Core Logic)
+│   ├── api/                # Backend API Routes (Email handling)
+│   ├── contact/            # Contact & Inquiry Page
+│   ├── experience/         # Events & Celebrations Showcase
+│   ├── gallery/            # Visual Media & Reels Section
+│   ├── grounds/            # Detailed Venue Specifications
+│   ├── legacy/             # Brand History & Ventures
+│   ├── globals.css         # Global Styles & CSS Design Tokens
+│   ├── layout.tsx          # Root Layout & SEO Metadata
+│   └── page.tsx            # Home / Landing Page
+├── components/             # Component-Based Architecture
+│   ├── animations/         # GSAP ScrollTrigger Configurations
+│   ├── Hero.tsx            # High-Impact Entry Section
+│   ├── Navbar.tsx          # Dynamic Premium Navigation
+│   ├── PremiumSVGs.tsx     # Custom Hand-Crafted SVG Assets
+│   ├── GalleryPreview.tsx  # Interactive Masonry Layout
+│   ├── FacilitiesSection.tsx# Amenity Grid with Micro-animations
+│   └── ...                 # Modular UI Elements
+├── public/                 # Static Resources
+│   ├── images/             # High-Resolution Backgrounds & Icons
+│   └── screenshots/        # Project Documentation Captures
+├── next.config.ts          # Project Configuration
+├── package.json            # Scripts & Dependencies
+├── tailwind.config.ts      # Design Token Integration
+└── tsconfig.json           # Type Safety Configuration
+```
 
 ## 📄 License
 

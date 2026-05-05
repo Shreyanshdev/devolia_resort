@@ -23,7 +23,7 @@ export default function Hero({
     description = "Experience the grandeur of Devolia Resort — where every moment is crafted with elegance, every celebration becomes a cherished memory.",
     primaryCTA = { label: "Plan Your Wedding", href: "/contact" },
     secondaryCTA = { label: "Explore Grounds", href: "/grounds" },
-    overlayOpacity = 0.4,
+    overlayOpacity = 0.5,
 }: HeroProps) {
     const heroRef = useRef<HTMLElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
@@ -126,9 +126,9 @@ export default function Hero({
                     height: "100%",
                     background: `linear-gradient(
             180deg,
-            rgba(45, 42, 38, 0.2) 0%,
+            rgba(45, 42, 38, 0.4) 0%,
             rgba(45, 42, 38, ${overlayOpacity}) 50%,
-            rgba(45, 42, 38, ${overlayOpacity + 0.15}) 100%
+            rgba(45, 42, 38, ${overlayOpacity + 0.1}) 100%
           )`,
                     zIndex: 1,
                 }}
@@ -191,6 +191,7 @@ export default function Hero({
                         letterSpacing: "0.3em",
                         color: "var(--accent)",
                         marginBottom: "var(--space-md)",
+                        textShadow: "0 1px 8px rgba(0, 0, 0, 0.4)",
                     }}
                 >
                     {subtitle}
@@ -207,6 +208,7 @@ export default function Hero({
                         marginBottom: "var(--space-lg)",
                         color: "var(--color-ivory)",
                         letterSpacing: "-0.01em",
+                        textShadow: "0 2px 15px rgba(0, 0, 0, 0.3)",
                     }}
                 >
                     {title}
@@ -224,6 +226,7 @@ export default function Hero({
                         margin: "0 auto",
                         marginBottom: "var(--space-xl)",
                         opacity: 0.9,
+                        textShadow: "0 2px 10px rgba(0, 0, 0, 0.3)",
                     }}
                 >
                     {description}
@@ -253,19 +256,7 @@ export default function Hero({
                 <ScrollIndicator color="var(--accent)" />
             </div>
 
-            {/* Bottom gradient fade */}
-            <div
-                style={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "150px",
-                    background: "linear-gradient(to top, var(--background), transparent)",
-                    zIndex: 5,
-                    pointerEvents: "none",
-                }}
-            />
+            {/* Removed bottom gradient fade as requested */}
 
             {/* CSS Animations - More reliable than GSAP for entrance */}
             <style jsx>{`

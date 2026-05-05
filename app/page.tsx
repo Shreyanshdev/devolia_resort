@@ -24,7 +24,7 @@ export default function Home() {
         description="Experience the grandeur of Devolia Resort — where every moment is crafted with elegance, every celebration becomes a cherished memory."
         primaryCTA={{ label: "Plan Your Wedding", href: "/contact" }}
         secondaryCTA={{ label: "Explore Grounds", href: "/grounds" }}
-        overlayOpacity={0.45}
+        overlayOpacity={0.6}
       />
 
       {/* Intro Section - Authority Statement with Image */}
